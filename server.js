@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
 
     socket.on('message', (message) => {
         console.log('Received messages:', message);
-        fs.writeFile('messages', message + '\n', err => {
+        fs.writeFile('messages', message + '\n',{ flag: 'a+' }, err => {
             if (err) {
                 console.error(err);
             }
