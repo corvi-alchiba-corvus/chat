@@ -1,8 +1,14 @@
-@import './base.css';
+@import 'base.css';
 
 #app {
   height: 100vh;
 }
+
+#messages {
+        height: 100vh;
+        margin-bottom: 50px;
+}
+
 
 .bottom-fixed {
         height: 50px;
