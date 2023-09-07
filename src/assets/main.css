@@ -1,0 +1,29 @@
+@import './base.css';
+
+#app {
+  height: 100vh;
+}
+
+.bottom-fixed {
+        height: 50px;
+        position: fixed;
+        bottom: 0;
+}
+
+.input-msg {
+        left: 0;
+        width: 90%;
+        background-color: #282828;
+        color: white;
+        font-size: x-large;
+        padding-left: 10px;
+}
+
+.input-msg:focus, input:focus{
+        outline: none;
+}
+
+.msg-submit {
+        right: 0;
+        width: 10%;
+}
