@@ -5,7 +5,7 @@
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+    <title>Chat</title>
   </head>
   <body>
       <div id="messages"></div>
@@ -13,8 +13,6 @@
       <button id="send-button" class="bottom-fixed msg-submit">Send</button>
       <script src="/socket.io/socket.io.js"></script>
       <script>
-        import { io } from "socket.io-client";
-
         const socket = io();
         socket.on('connect', () => {
             console.log('Connected to server');
