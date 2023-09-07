@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Socket.io Tutorial</title>
+    <title>Chat</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<h1>Socket.io Tutorial</h1>
+<h1>Chat</h1>
 <div id="messages"></div>
-<input id="message-input" class="bottom-fixed input-msg" type="text" placeholder="Type your message here">
+<input id="message-input" class="bottom-fixed input-msg" type="text" placeholder="Type your message here...">
+<input id="name-input" class="bottom-fixed input-name" type="text" placeholder="Name">
 <button id="send-button" class="bottom-fixed msg-submit">Send</button>
 <script src="/socket.io/socket.io.js"></script>
 <script>
@@ -19,12 +21,25 @@
     });
     const messages = document.getElementById('messages');
     const messageInput = document.getElementById('message-input');
+    const nameInput = document.getElementById('name-input');
     const sendButton = document.getElementById('send-button');
+
     sendButton.addEventListener('click', () => {
-        const message = messageInput.value;
+        const message = nameInput.value + ": " + messageInput.value;
         socket.emit('message', message);
         messageInput.value = '';
     });
+
+    messageInput.addEventListener("keypress", function(event) {
+        // If the user presses the "Enter" key on the keyboard
+        if (event.key === "Enter") {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            // Trigger the button element with a click
+            document.getElementById("send-button").click();
+        }
+    });
+
     socket.on('message', (message) => {
         const messageElement = document.createElement('div');
         messageElement.innerText = message;

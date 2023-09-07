@@ -16,13 +16,23 @@
         bottom: 0;
 }
 
-.input-msg {
+.input-name{
         left: 0;
-        width: 90%;
+        width: 10%;
         background-color: #282828;
         color: white;
         font-size: x-large;
         padding-left: 10px;
+}
+
+.input-msg {
+        left: 0;
+        width: 80%;
+        background-color: #282828;
+        color: white;
+        font-size: x-large;
+        padding-left: 10px;
+        margin-left: 10%;
 }
 
 .input-msg:focus, input:focus{
@@ -32,4 +42,7 @@
 .msg-submit {
         right: 0;
         width: 10%;
+        background-color: #282828;
+        color: white;
+        font-size: x-large;
 }
