@@ -15,7 +15,7 @@
 .bottom-fixed {
         height: 50px;
         position: fixed;
-        bottom: 0;
+        bottom: 30px;
 }
 
 .input-name{
