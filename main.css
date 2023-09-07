@@ -1,11 +1,12 @@
 @import 'base.css';
 
 #app {
-  height: 100vh;
+        height: 80%;
+        margin: 10px;
 }
 
 #messages {
-        height: 70vh;
+        height: 70%;
         margin-bottom: 50px;
         font-size: xx-large;
 }
