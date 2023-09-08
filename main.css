@@ -1,10 +1,5 @@
 @import 'base.css';
 
-#app {
-        height: 80%;
-        margin: 10px;
-}
-
 #messages {
         height: 70%;
         margin-bottom: 50px;
@@ -15,7 +10,7 @@
 .bottom-fixed {
         height: 50px;
         position: fixed;
-        bottom: 30px;
+        bottom: 0;
 }
 
 .input-name{
